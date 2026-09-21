@@ -4,110 +4,99 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Forever Us ❤️</title>
- 
+
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
- 
+
 body{
-background:linear-gradient(135deg,#ff758c,#ff7eb3);
-color:white;
-text-align:center;
-overflow-x:hidden;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:white;
+    text-align:center;
 }
- 
+
 section{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:30px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
 }
- 
+
 h1{
-font-size:50px;
-margin-bottom:20px;
+    font-size:50px;
+    margin-bottom:20px;
 }
- 
+
 h2{
-font-size:35px;
-margin-bottom:15px;
+    font-size:35px;
+    margin-bottom:20px;
 }
- 
+
 p{
-font-size:22px;
-max-width:800px;
-line-height:1.8;
+    font-size:22px;
+    max-width:800px;
+    line-height:1.8;
 }
- 
-button{
-padding:15px 30px;
-font-size:20px;
-border:none;
-border-radius:50px;
-background:white;
-color:#ff4081;
-cursor:pointer;
-font-weight:bold;
-}
- 
+
 .card{
-background:rgba(255,255,255,0.15);
-padding:30px;
-border-radius:20px;
-backdrop-filter:blur(10px);
-max-width:800px;
+    background:rgba(255,255,255,0.15);
+    padding:30px;
+    border-radius:20px;
+    width:90%;
+    max-width:800px;
 }
- 
-.heart{
-position:fixed;
-top:-10px;
-font-size:24px;
-animation:fall linear infinite;
-}
- 
-@keyframes fall{
-0%{transform:translateY(-10px);}
-100%{transform:translateY(110vh);}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4081;
+    font-size:20px;
+    cursor:pointer;
+    margin-top:20px;
 }
 </style>
 </head>
- 
+
 <body>
- 
+
 <section>
 <h1>❤️ Hey Beautiful ❤️</h1>
-<p>Scroll Down For A Special Surprise 🥰</p>
+<p>Scroll Down For Your Surprise 🥰</p>
 </section>
- 
+
 <section>
 <div class="card">
-<h2>🥰 Our Journey</h2>
+<h2>🥰 Our Story</h2>
 <p>
-4 years ago our story started.
-Since then every day has been more beautiful because of you.
+4 years ago our journey started.
+Since then every day has become special because of you.
 </p>
 </div>
 </section>
- 
+
 <section>
 <div class="card">
 <h2>💕 Thank You</h2>
 <p>
-Thank you for every smile, every late-night conversation,
-every laugh and every beautiful memory.
+Thank you for every smile,
+every call,
+every memory,
+and every moment.
 </p>
 </div>
 </section>
- 
+
 <section>
 <div class="card">
-<h2>🌹 Why You Are Special</h2>
+<h2>🌹 Why You're Special</h2>
 <p>❤️ Your Smile</p>
 <p>❤️ Your Care</p>
 <p>❤️ Your Support</p>
@@ -115,62 +104,36 @@ every laugh and every beautiful memory.
 <p>❤️ Everything About You</p>
 </div>
 </section>
- 
+
 <section>
 <div class="card">
 <h2>💌 A Message For You</h2>
 <p>
-These 4 years will always be one of the most beautiful chapters of my life.
-Thank you for being part of my journey.
+These 4 years have been one of the most beautiful parts of my life.
+Thank you for being with me.
 </p>
 </div>
 </section>
- 
+
 <section>
 <div class="card">
 <h2>❤️ Final Surprise ❤️</h2>
- 
+
 <button onclick="showLove()">
-Click Here My Love ❤️
+Click Here ❤️
 </button>
- 
-<div id="message"></div>
- 
+
+<div id="love"></div>
+
 </div>
 </section>
- 
+
 <script>
- 
 function showLove(){
- 
-document.getElementById("message").innerHTML = `
-<br>
-<h2>❤️ I Love You ❤️</h2>
- 
-<p>
-Thank you for making these four years unforgettable.
-No matter what happens,
-you will always hold a special place in my heart. ❤️
-</p>
-`;
- 
+document.getElementById("love").innerHTML =
+"<h2>❤️ I Love You ❤️</h2><p>You make my world brighter every day. Thank you for these beautiful 4 years. ❤️</p>";
 }
- 
-for(let i=0;i<40;i++){
- 
-let heart=document.createElement("div");
- 
-heart.innerHTML="❤️";
-heart.className="heart";
- 
-heart.style.left=Math.random()*100+"%";
-heart.style.animationDuration=(3+Math.random()*5)+"s";
- 
-document.body.appendChild(heart);
- 
-}
- 
 </script>
- 
+
 </body>
 </html>
