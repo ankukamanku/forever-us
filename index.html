@@ -1,79 +1,176 @@
 <!DOCTYPE html>
-2
-<html>
-3
+<html lang="en">
 <head>
-4
-<title>Our Love Story</title>
-5
-</head>
-6
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever Us ❤️</title>
  
-7
-<body>
-8
- 
-9
-<h1>Hey Beautiful ❤️</h1>
-10
- 
-11
-<p>
-12
-4 years ago you entered my life and made everything beautiful.
-13
-</p>
-14
- 
-15
-<h2>Thank You ❤️</h2>
-16
- 
-17
-<p>
-18
-Thank you for all the memories.
-19
-</p>
-20
- 
-21
-<button onclick="showMessage()">
-22
-Click Here ❤️
-23
-</button>
-24
- 
-25
-<p id="msg"></p>
-26
- 
-27
-<script>
-28
- 
-29
-function showMessage() {
-30
- 
-31
-document.getElementById("msg").innerHTML =
-32
-"I Love You ❤️";
-33
- 
-34
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
-35
  
-36
+body{
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+ 
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+ 
+h1{
+font-size:50px;
+margin-bottom:20px;
+}
+ 
+h2{
+font-size:35px;
+margin-bottom:15px;
+}
+ 
+p{
+font-size:22px;
+max-width:800px;
+line-height:1.8;
+}
+ 
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4081;
+cursor:pointer;
+font-weight:bold;
+}
+ 
+.card{
+background:rgba(255,255,255,0.15);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+max-width:800px;
+}
+ 
+.heart{
+position:fixed;
+top:-10px;
+font-size:24px;
+animation:fall linear infinite;
+}
+ 
+@keyframes fall{
+0%{transform:translateY(-10px);}
+100%{transform:translateY(110vh);}
+}
+</style>
+</head>
+ 
+<body>
+ 
+<section>
+<h1>❤️ Hey Beautiful ❤️</h1>
+<p>Scroll Down For A Special Surprise 🥰</p>
+</section>
+ 
+<section>
+<div class="card">
+<h2>🥰 Our Journey</h2>
+<p>
+4 years ago our story started.
+Since then every day has been more beautiful because of you.
+</p>
+</div>
+</section>
+ 
+<section>
+<div class="card">
+<h2>💕 Thank You</h2>
+<p>
+Thank you for every smile, every late-night conversation,
+every laugh and every beautiful memory.
+</p>
+</div>
+</section>
+ 
+<section>
+<div class="card">
+<h2>🌹 Why You Are Special</h2>
+<p>❤️ Your Smile</p>
+<p>❤️ Your Care</p>
+<p>❤️ Your Support</p>
+<p>❤️ Your Kindness</p>
+<p>❤️ Everything About You</p>
+</div>
+</section>
+ 
+<section>
+<div class="card">
+<h2>💌 A Message For You</h2>
+<p>
+These 4 years will always be one of the most beautiful chapters of my life.
+Thank you for being part of my journey.
+</p>
+</div>
+</section>
+ 
+<section>
+<div class="card">
+<h2>❤️ Final Surprise ❤️</h2>
+ 
+<button onclick="showLove()">
+Click Here My Love ❤️
+</button>
+ 
+<div id="message"></div>
+ 
+</div>
+</section>
+ 
+<script>
+ 
+function showLove(){
+ 
+document.getElementById("message").innerHTML = `
+<br>
+<h2>❤️ I Love You ❤️</h2>
+ 
+<p>
+Thank you for making these four years unforgettable.
+No matter what happens,
+you will always hold a special place in my heart. ❤️
+</p>
+`;
+ 
+}
+ 
+for(let i=0;i<40;i++){
+ 
+let heart=document.createElement("div");
+ 
+heart.innerHTML="❤️";
+heart.className="heart";
+ 
+heart.style.left=Math.random()*100+"%";
+heart.style.animationDuration=(3+Math.random()*5)+"s";
+ 
+document.body.appendChild(heart);
+ 
+}
+ 
 </script>
-37
  
-38
 </body>
-39
- 
-40
 </html>
