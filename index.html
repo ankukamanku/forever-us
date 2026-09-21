@@ -1,193 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Anku ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Anku ❤️</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
-
 body{
-background:linear-gradient(135deg,#ff758c,#ff7eb3);
-color:white;
-overflow-x:hidden;
-scroll-behavior:smooth;
-}
-
-section{
-min-height:100vh;
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff4d6d,#ff8fab);
 display:flex;
 justify-content:center;
 align-items:center;
-padding:30px;
+height:100vh;
 text-align:center;
+color:white;
+padding:20px;
 }
 
-.card{
-background:rgba(255,255,255,0.12);
-backdrop-filter:blur(10px);
-padding:35px;
-border-radius:25px;
-max-width:850px;
-width:90%;
+.box{
+max-width:700px;
 }
 
 h1{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-h2{
-font-size:2rem;
+font-size:42px;
 margin-bottom:20px;
 }
 
 p{
-font-size:1.2rem;
-line-height:1.9;
+font-size:22px;
+line-height:1.8;
 }
 
 button{
-padding:15px 30px;
+padding:15px 35px;
 border:none;
 border-radius:50px;
 background:white;
-color:#ff4081;
-font-size:18px;
+color:#ff4d6d;
+font-size:20px;
 font-weight:bold;
 cursor:pointer;
 margin-top:20px;
 }
-
-.heart{
-position:fixed;
-top:-20px;
-font-size:20px;
-animation:fall linear infinite;
-}
-
-@keyframes fall{
-0%{transform:translateY(-20px);}
-100%{transform:translateY(110vh);}
-}
 </style>
 </head>
+
 <body>
 
-<section>
-<div class="card">
-<h1>❤️ Dear Anku ❤️</h1>
-<p>
-Aaj main tumhe koi gift nahi de raha...
-sirf kuch dil ki baatein kehna chahta hoon. ❤️
+<div class="box">
+
+<h1 id="title">❤️ Dear Anku ❤️</h1>
+
+<p id="text">
+Mere paas tumhare liye ek chhota sa surprise hai... ❤️
 </p>
-</div>
-</section>
 
-<section>
-<div class="card">
-<h2>🌸 4 Years Ago...</h2>
-<p>
-4 saal pehle mujhe nahi pata tha ki meri zindagi mein ek aisi person aayegi
-jo meri har khushi ka reason ban jayegi.
-Aur wo person tum ho, Anku. ❤️
-</p>
-</div>
-</section>
-
-<section>
-<div class="card">
-<h2>🥰 Thank You</h2>
-<p>
-Har call ke liye...
-Har message ke liye...
-Har smile ke liye...
-Har us moment ke liye jab tum mere saath rahi.
-Thank You Anku. ❤️
-</p>
-</div>
-</section>
-
-<section>
-<div class="card">
-<h2>💕 Tumhari Kuch Baatein</h2>
-<p>
-❤️ Tumhari Smile<br>
-❤️ Tumhara Care<br>
-❤️ Tumhara Nature<br>
-❤️ Tumhara Support<br>
-❤️ Aur Sabse Zyada... Tumhara Saath
-</p>
-</div>
-</section>
-
-<section>
-<div class="card">
-<h2>💌 Dil Se Ek Baat</h2>
-<p>
-Sach kahun to tum meri life ka sabse beautiful chapter ho.
-Mujhe future ka nahi pata,
-lekin itna zaroor pata hai ki meri bahut si khushiyon mein
-tumhara naam likha hua hai. ❤️
-</p>
-</div>
-</section>
-
-<section>
-<div class="card">
-<h2>❤️ Final Surprise ❤️</h2>
-
-<button onclick="showLove()">
-Click Here Anku ❤️
+<button onclick="nextPage()" id="btn">
+Click Here ❤️
 </button>
 
-<div id="love"></div>
-
 </div>
-</section>
 
 <script>
 
-function showLove(){
+let page = 1;
 
-document.getElementById("love").innerHTML = `
+function nextPage(){
 
-<br><br>
-
-<h2>❤️ Anku ❤️</h2>
-
-<p style="font-size:23px;">
-Thank you for these beautiful 4 years. ❤️
-<br><br>
-Tum meri life ki sabse pyari memory ho.
-<br><br>
-Aur agar mujhe dobara chance mile...
-to main tumhe hi choose karunga.
-<br><br>
-❤️ Always Yours ❤️
-</p>
-
-`;
-
+if(page===1){
+document.getElementById("title").innerHTML="🥰 Meri Anku";
+document.getElementById("text").innerHTML=
+"4 saal pehle mujhe bilkul nahi pata tha ki meri life mein itni sundar aur sakshat devi jaisi biwi aayegi. Main khud ko duniya ka sabse lucky insaan maanta hoon ki tum meri zindagi mein ho. ❤️";
+page++;
 }
 
-for(let i=0;i<50;i++){
+else if(page===2){
+document.getElementById("title").innerHTML="💕 Thank You";
+document.getElementById("text").innerHTML=
+"Har call ke liye, har message ke liye, har smile ke liye aur har us pal ke liye jo humne saath bitaya... Thank You Anku ❤️";
+page++;
+}
 
-let heart=document.createElement("div");
+else if(page===3){
+document.getElementById("title").innerHTML="🌹 Tumhari Baatein";
+document.getElementById("text").innerHTML=
+"❤️ Tumhari Smile<br><br>❤️ Tumhara Care<br><br>❤️ Tumhara Pyaar<br><br>❤️ Tumhara Saath<br><br>❤️ Aur Sabse Zyada... Tum";
+page++;
+}
 
-heart.className="heart";
-heart.innerHTML="❤️";
+else if(page===4){
+document.getElementById("title").innerHTML="💌 Dil Se";
+document.getElementById("text").innerHTML=
+"Meri zindagi ki sabse khoobsurat yaadon mein tumhara naam likha hua hai. Tum ho to sab kuch achha lagta hai. ❤️";
+page++;
+}
 
-heart.style.left=Math.random()*100+"%";
-heart.style.animationDuration=(3+Math.random()*5)+"s";
-
-document.body.appendChild(heart);
+else if(page===5){
+document.getElementById("title").innerHTML="❤️ I Love You Anku ❤️";
+document.getElementById("text").innerHTML=
+"Thank you meri jaan, in khoobsurat 4 saalon ke liye. Main har roz bhagwan ka shukriya karta hoon ki tum meri zindagi mein ho. ❤️<br><br>Forever Yours ❤️";
+document.getElementById("btn").innerHTML="❤️ Forever ❤️";
+page++;
+}
 
 }
 
@@ -195,3 +111,4 @@ document.body.appendChild(heart);
 
 </body>
 </html>
+``
